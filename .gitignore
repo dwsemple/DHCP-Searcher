@@ -1,0 +1,8 @@
+/source/backup
+/source/*.class
+/data_backup/
+/Example_Dataset/
+/Example_Logs/
+/Example_Outputs/
+/Example_Scripts/
+Thumbs.db
