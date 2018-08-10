@@ -67,6 +67,7 @@ public class DHCPSearcher
 
 	public static void main(String args[]) {
 		DHCPSearcher searcher = new DHCPSearcher();
+		searcher.initialiseFolders();
 		boolean run = true;
 		int menu_option = 0;
 		BufferedReader console_in = new BufferedReader(new InputStreamReader(System.in));
@@ -207,6 +208,16 @@ public class DHCPSearcher
 
 	public List<String> getIgnoredServers() {
 		return ignored_servers;
+	}
+
+	public void initialiseFolders() {
+		new File("./data/servers").mkdirs();
+		new File("./data/scopes").mkdirs();
+		new File("./data/leases").mkdirs();
+		new File("./data/reservations").mkdirs();
+		new File("./data/inactivereservations").mkdirs();
+		new File("./log").mkdirs();
+		new File("./output").mkdirs();
 	}
 
 	public void addIgnoredServer(String server) {
